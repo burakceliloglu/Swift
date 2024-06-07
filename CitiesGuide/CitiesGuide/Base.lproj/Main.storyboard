@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CitiesGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rVW-8M-8t6">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rVW-8M-8t6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EL7-67-tlP"/>
+                            <constraint firstItem="rVW-8M-8t6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Liz-nc-EED"/>
+                            <constraint firstItem="rVW-8M-8t6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="M8T-fE-27V"/>
+                            <constraint firstItem="rVW-8M-8t6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tng-kl-p9o"/>
+                            <constraint firstItem="rVW-8M-8t6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Yak-ng-j6A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rVW-8M-8t6" secondAttribute="bottom" id="hfa-x4-Q34"/>
+                            <constraint firstItem="rVW-8M-8t6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jvm-pJ-2kw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rVW-8M-8t6" secondAttribute="bottom" id="oBj-NG-f07"/>
+                            <constraint firstItem="rVW-8M-8t6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wwI-Kz-QRx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rVW-8M-8t6" secondAttribute="bottom" id="zmo-CV-byJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTableView" destination="rVW-8M-8t6" id="ePE-c2-Wt2"/>
+                        <segue destination="Omd-uw-lRk" kind="show" identifier="toCityDetails" id="9bl-4w-l8B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="1FN-t1-tfl">
+            <objects>
+                <viewController id="Omd-uw-lRk" customClass="DetailViewController" customModule="CitiesGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cGL-PO-XM9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fc1-F0-Z2J">
+                                <rect key="frame" x="46" y="97" width="301" height="192"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDB-kL-JfE">
+                                <rect key="frame" x="83" y="329" width="226" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="zCT-gj-71Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohx-Bd-BI4">
+                                <rect key="frame" x="83" y="402" width="226" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="xId-07-fRN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aKM-17-Yek"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZDB-kL-JfE" firstAttribute="leading" secondItem="ohx-Bd-BI4" secondAttribute="leading" id="3pu-UF-8SU"/>
+                            <constraint firstItem="ohx-Bd-BI4" firstAttribute="top" secondItem="ZDB-kL-JfE" secondAttribute="bottom" constant="8" symbolic="YES" id="7SM-2T-U0v"/>
+                            <constraint firstItem="ZDB-kL-JfE" firstAttribute="centerX" secondItem="cGL-PO-XM9" secondAttribute="centerX" id="Dod-4Y-Yza"/>
+                            <constraint firstItem="Fc1-F0-Z2J" firstAttribute="top" secondItem="aKM-17-Yek" secondAttribute="top" constant="97" id="V70-9B-GbH"/>
+                            <constraint firstItem="Fc1-F0-Z2J" firstAttribute="leading" secondItem="aKM-17-Yek" secondAttribute="leading" constant="46" id="YWg-e4-M4a"/>
+                            <constraint firstItem="ZDB-kL-JfE" firstAttribute="trailing" secondItem="ohx-Bd-BI4" secondAttribute="trailing" id="d7m-xg-NTF"/>
+                            <constraint firstItem="Fc1-F0-Z2J" firstAttribute="centerX" secondItem="ZDB-kL-JfE" secondAttribute="centerX" id="f5W-wl-N9Z"/>
+                            <constraint firstItem="ZDB-kL-JfE" firstAttribute="top" secondItem="Fc1-F0-Z2J" secondAttribute="bottom" constant="40" id="qlW-rv-TFl"/>
+                            <constraint firstItem="ZDB-kL-JfE" firstAttribute="leading" secondItem="aKM-17-Yek" secondAttribute="leading" constant="83" id="sZU-ej-Z6d"/>
+                            <constraint firstItem="aKM-17-Yek" firstAttribute="bottom" secondItem="ohx-Bd-BI4" secondAttribute="bottom" constant="375" id="yR1-TN-giT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aup-6D-929"/>
+                    <connections>
+                        <outlet property="cityName" destination="ZDB-kL-JfE" id="hdH-lK-7BV"/>
+                        <outlet property="cityRegion" destination="ohx-Bd-BI4" id="IfR-2i-k0c"/>
+                        <outlet property="imageView" destination="Fc1-F0-Z2J" id="xlk-ed-bzv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbx-YA-6AD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864.8854961832061" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
